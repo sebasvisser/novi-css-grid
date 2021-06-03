@@ -6,20 +6,43 @@
 
 #container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 184px 100px auto 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
     gap: 16px 16px;
     grid-template-areas:
+    "area-a"
+    "area-b"
+    "area-c"
+    "area-d "
+    "area-e"
+    " . "
+    "area-f";
+    background-color: #FFEFDB;
+    padding: 16px;
+}
+
+div {
+    background-color: #BA3B45;
+    padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    #container {
+        background-color: #FFEFDB;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 184px 100px auto 50px;
+        gap: 16px 16px;
+        grid-template-areas:
     "area-a area-c area-c"
     "area-b area-c area-c"
     "area-b area-e area-d"
     "area-b area-e . "
     "area-f area-f area-f";
-    background-color: #FFEFDB;
+    }
 }
 
 #item-a {
-    background-color: #BA3B45;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -28,7 +51,6 @@
 }
 
 #item-b {
-    background-color: #BA3B45;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,7 +59,6 @@
 }
 
 #item-c {
-    background-color: #BA3B45;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -46,31 +67,25 @@
 }
 
 #item-d {
-    background-color: #BA3B45;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items:center;
     grid-area: area-d;
-
 }
 
 #item-e {
-    background-color: #BA3B45;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items:center;
     grid-area: area-e;
-
 }
 
 #item-f {
-    background-color: #BA3B45;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items:center;
     grid-area: area-f;
-
 }
