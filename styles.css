@@ -1,7 +1,7 @@
 /*Maak hier jouw CSS!*/
 
 * {
-    margin: 0px;
+    margin: 0;
 }
 
 #container {
@@ -13,7 +13,7 @@
     "area-a"
     "area-b"
     "area-c"
-    "area-d "
+    "area-d"
     "area-e"
     " . "
     "area-f";
