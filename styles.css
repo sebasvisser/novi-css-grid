@@ -1,1 +1,14 @@
 /*Maak hier jouw CSS!*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 184px 01px auto 50px;
+    gap: 15px 16px;
+    grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . .";
+}
