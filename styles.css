@@ -1,1 +1,90 @@
 /*Maak hier jouw CSS!*/
+
+* {
+    margin: 0;
+}
+
+:root {
+    --main-bg-color: #FFEFDB;
+    --container-bg-color: #BA3B45;
+    --main-border-color: #9A303A;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    gap: 16px 16px;
+    grid-template-areas:
+    "area-a"
+    "area-b"
+    "area-c"
+    "area-d"
+    "area-e"
+    " . "
+    "area-f";
+    background-color: var(--main-bg-color);
+    padding: 16px;
+}
+
+#item-a, #item-b, #item-c, #item-d, #item-e, #item-f {
+    background-color: var(--container-bg-color);
+    border: 2px solid var(--main-border-color);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    padding: 16px;
+}
+
+#item-a {
+    grid-area: area-a;
+}
+
+#item-b {
+    grid-area: area-b;
+}
+
+#item-c {
+    grid-area: area-c;
+}
+
+#item-d {
+    grid-area: area-d;
+}
+
+#item-e {
+    grid-area: area-e;
+}
+
+#item-f {
+    grid-area: area-f;
+}
+
+/*Alleen op mobile die stippellijn rondom het lege element*/
+@media screen and (max-width: 768px) {
+    #container::before {
+        content: "";
+        border: 3px dashed #FFDAA8;
+        grid-column: 1;
+        grid-row: 6;
+    }
+}
+
+/*Andere layout voor bredere schermen*/
+@media screen and (min-width: 768px) {
+    #container {
+        background-color: #FFEFDB;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 184px 100px auto 50px;
+        gap: 16px 16px;
+        grid-template-areas:
+    "area-a area-c area-c"
+    "area-b area-c area-c"
+    "area-b area-e area-d"
+    "area-b area-e . "
+    "area-f area-f area-f";
+    }
+}
